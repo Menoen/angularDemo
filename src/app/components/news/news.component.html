@@ -1,1 +1,30 @@
-<p>news works!</p>
+<p>{{title}}</p>
+<h5>{{userinfo.username}}</h5>
+<h5>{{userinfo.age}}</h5>
+<hr />
+<h5 [title]="student">
+  我叫李四
+</h5>
+<hr/>
+<h4>解析html</h4>
+<h5>{{content}}</h5>
+<h5 [innerHTML]="content"></h5>
+<hr/>
+<h4>模板里允许简单的运算</h4>
+1+2={{1+2}}
+<hr/>
+<h4>定义数组</h4>
+<ol>
+  <li *ngFor="let item of arr">
+    {{item}}
+  </li>
+</ol>
+<ul>
+  <li *ngFor="let item of userList">
+    姓名：{{item.username}}-----年龄：{{item.age}}
+  </li>
+</ul>
+<hr/>
+<h4>引入图片</h4>
+<img src="assets/pic_01.png" alt="">
+<img [src]="picture" alt="">
